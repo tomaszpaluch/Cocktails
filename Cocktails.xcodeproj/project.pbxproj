@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		3094345E2346250D00040B09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3094345D2346250D00040B09 /* AppDelegate.swift */; };
-		309434602346250D00040B09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3094345F2346250D00040B09 /* ViewController.swift */; };
+		309434602346250D00040B09 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3094345F2346250D00040B09 /* MainViewController.swift */; };
 		309434632346250D00040B09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309434612346250D00040B09 /* Main.storyboard */; };
 		309434662346250D00040B09 /* Cocktails.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 309434642346250D00040B09 /* Cocktails.xcdatamodeld */; };
 		309434682346251100040B09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309434672346251100040B09 /* Assets.xcassets */; };
 		3094346B2346251100040B09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309434692346251100040B09 /* LaunchScreen.storyboard */; };
 		309434762346251100040B09 /* CocktailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309434752346251100040B09 /* CocktailsTests.swift */; };
+		309434812346288C00040B09 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309434802346288B00040B09 /* CategoryViewController.swift */; };
+		309434832346291F00040B09 /* CocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309434822346291F00040B09 /* CocktailViewController.swift */; };
+		30943485234629A500040B09 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30943484234629A500040B09 /* RestService.swift */; };
+		3094348723462BB200040B09 /* RestStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3094348623462BB200040B09 /* RestStructs.swift */; };
+		30943489234676A200040B09 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30943488234676A100040B09 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +34,7 @@
 /* Begin PBXFileReference section */
 		3094345A2346250D00040B09 /* Cocktails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocktails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3094345D2346250D00040B09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3094345F2346250D00040B09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3094345F2346250D00040B09 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		309434622346250D00040B09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		309434652346250D00040B09 /* Cocktails.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cocktails.xcdatamodel; sourceTree = "<group>"; };
 		309434672346251100040B09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +43,11 @@
 		309434712346251100040B09 /* CocktailsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocktailsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		309434752346251100040B09 /* CocktailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsTests.swift; sourceTree = "<group>"; };
 		309434772346251100040B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		309434802346288B00040B09 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		309434822346291F00040B09 /* CocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewController.swift; sourceTree = "<group>"; };
+		30943484234629A500040B09 /* RestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
+		3094348623462BB200040B09 /* RestStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestStructs.swift; sourceTree = "<group>"; };
+		30943488234676A100040B09 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +89,11 @@
 		3094345C2346250D00040B09 /* Cocktails */ = {
 			isa = PBXGroup;
 			children = (
+				3094348C2346874700040B09 /* Model */,
+				3094348B2346874100040B09 /* View */,
+				3094348A2346873700040B09 /* Controller */,
 				3094345D2346250D00040B09 /* AppDelegate.swift */,
-				3094345F2346250D00040B09 /* ViewController.swift */,
-				309434612346250D00040B09 /* Main.storyboard */,
-				309434672346251100040B09 /* Assets.xcassets */,
-				309434692346251100040B09 /* LaunchScreen.storyboard */,
 				3094346C2346251100040B09 /* Info.plist */,
-				309434642346250D00040B09 /* Cocktails.xcdatamodeld */,
 			);
 			path = Cocktails;
 			sourceTree = "<group>";
@@ -97,6 +105,37 @@
 				309434772346251100040B09 /* Info.plist */,
 			);
 			path = CocktailsTests;
+			sourceTree = "<group>";
+		};
+		3094348A2346873700040B09 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3094345F2346250D00040B09 /* MainViewController.swift */,
+				309434802346288B00040B09 /* CategoryViewController.swift */,
+				309434822346291F00040B09 /* CocktailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3094348B2346874100040B09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				309434612346250D00040B09 /* Main.storyboard */,
+				309434672346251100040B09 /* Assets.xcassets */,
+				309434692346251100040B09 /* LaunchScreen.storyboard */,
+				30943488234676A100040B09 /* TableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3094348C2346874700040B09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				309434642346250D00040B09 /* Cocktails.xcdatamodeld */,
+				30943484234629A500040B09 /* RestService.swift */,
+				3094348623462BB200040B09 /* RestStructs.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +239,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				309434602346250D00040B09 /* ViewController.swift in Sources */,
+				309434812346288C00040B09 /* CategoryViewController.swift in Sources */,
+				30943489234676A200040B09 /* TableViewCell.swift in Sources */,
+				309434602346250D00040B09 /* MainViewController.swift in Sources */,
 				309434662346250D00040B09 /* Cocktails.xcdatamodeld in Sources */,
+				309434832346291F00040B09 /* CocktailViewController.swift in Sources */,
 				3094345E2346250D00040B09 /* AppDelegate.swift in Sources */,
+				3094348723462BB200040B09 /* RestStructs.swift in Sources */,
+				30943485234629A500040B09 /* RestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Cocktails/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,6 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Cocktails/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
