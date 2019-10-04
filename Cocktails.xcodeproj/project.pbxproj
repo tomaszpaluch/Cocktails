@@ -19,6 +19,23 @@
 		30943485234629A500040B09 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30943484234629A500040B09 /* RestService.swift */; };
 		3094348723462BB200040B09 /* RestStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3094348623462BB200040B09 /* RestStructs.swift */; };
 		30943489234676A200040B09 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30943488234676A100040B09 /* TableViewCell.swift */; };
+		30A942132347808C001FF529 /* RestAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A942122347808C001FF529 /* RestAgent.swift */; };
+		30A9421523478098001FF529 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9421423478098001FF529 /* Categories.swift */; };
+		30A94217234780A0001FF529 /* Cocktails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A94216234780A0001FF529 /* Cocktails.swift */; };
+		30A9421923478745001FF529 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9421823478745001FF529 /* Mocks.swift */; };
+		30A9421B234789D6001FF529 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 30A9421A234789D6001FF529 /* categories.json */; };
+		30A9421D23478A16001FF529 /* cocktails.json in Resources */ = {isa = PBXBuildFile; fileRef = 30A9421C23478A16001FF529 /* cocktails.json */; };
+		30A9421F23478DF3001FF529 /* cocktails_ordinary.json in Resources */ = {isa = PBXBuildFile; fileRef = 30A9421E23478DF3001FF529 /* cocktails_ordinary.json */; };
+		30A942202347900C001FF529 /* cocktails_ordinary.json in Resources */ = {isa = PBXBuildFile; fileRef = 30A9421E23478DF3001FF529 /* cocktails_ordinary.json */; };
+		30A942212347900C001FF529 /* cocktails.json in Resources */ = {isa = PBXBuildFile; fileRef = 30A9421C23478A16001FF529 /* cocktails.json */; };
+		30A942222347900C001FF529 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 30A9421A234789D6001FF529 /* categories.json */; };
+		30A942242347BD0B001FF529 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A942232347BD0B001FF529 /* Cache.swift */; };
+		30A942272347BDB5001FF529 /* CachedCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A942252347BDB5001FF529 /* CachedCategory+CoreDataClass.swift */; };
+		30A942282347BDB5001FF529 /* CachedCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A942262347BDB5001FF529 /* CachedCategory+CoreDataProperties.swift */; };
+		30A942332347CE9F001FF529 /* CachedImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A942312347CE9F001FF529 /* CachedImage+CoreDataClass.swift */; };
+		30A942342347CE9F001FF529 /* CachedImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A942322347CE9F001FF529 /* CachedImage+CoreDataProperties.swift */; };
+		30A942362347D9C7001FF529 /* CocktailError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A942352347D9C7001FF529 /* CocktailError.swift */; };
+		30A942382347DCFB001FF529 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 30A942372347DCFB001FF529 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +65,20 @@
 		30943484234629A500040B09 /* RestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
 		3094348623462BB200040B09 /* RestStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestStructs.swift; sourceTree = "<group>"; };
 		30943488234676A100040B09 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		30A942122347808C001FF529 /* RestAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAgent.swift; sourceTree = "<group>"; };
+		30A9421423478098001FF529 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		30A94216234780A0001FF529 /* Cocktails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktails.swift; sourceTree = "<group>"; };
+		30A9421823478745001FF529 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		30A9421A234789D6001FF529 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
+		30A9421C23478A16001FF529 /* cocktails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cocktails.json; sourceTree = "<group>"; };
+		30A9421E23478DF3001FF529 /* cocktails_ordinary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cocktails_ordinary.json; sourceTree = "<group>"; };
+		30A942232347BD0B001FF529 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		30A942252347BDB5001FF529 /* CachedCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		30A942262347BDB5001FF529 /* CachedCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30A942312347CE9F001FF529 /* CachedImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedImage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		30A942322347CE9F001FF529 /* CachedImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30A942352347D9C7001FF529 /* CocktailError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailError.swift; sourceTree = "<group>"; };
+		30A942372347DCFB001FF529 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +102,7 @@
 		309434512346250D00040B09 = {
 			isa = PBXGroup;
 			children = (
+				30A942372347DCFB001FF529 /* README.md */,
 				3094345C2346250D00040B09 /* Cocktails */,
 				309434742346251100040B09 /* CocktailsTests */,
 				3094345B2346250D00040B09 /* Products */,
@@ -101,7 +133,11 @@
 		309434742346251100040B09 /* CocktailsTests */ = {
 			isa = PBXGroup;
 			children = (
+				30A9421E23478DF3001FF529 /* cocktails_ordinary.json */,
+				30A9421C23478A16001FF529 /* cocktails.json */,
+				30A9421A234789D6001FF529 /* categories.json */,
 				309434752346251100040B09 /* CocktailsTests.swift */,
+				30A9421823478745001FF529 /* Mocks.swift */,
 				309434772346251100040B09 /* Info.plist */,
 			);
 			path = CocktailsTests;
@@ -131,9 +167,18 @@
 		3094348C2346874700040B09 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				309434642346250D00040B09 /* Cocktails.xcdatamodeld */,
 				30943484234629A500040B09 /* RestService.swift */,
+				30A942352347D9C7001FF529 /* CocktailError.swift */,
 				3094348623462BB200040B09 /* RestStructs.swift */,
+				30A942122347808C001FF529 /* RestAgent.swift */,
+				30A9421423478098001FF529 /* Categories.swift */,
+				30A94216234780A0001FF529 /* Cocktails.swift */,
+				309434642346250D00040B09 /* Cocktails.xcdatamodeld */,
+				30A942232347BD0B001FF529 /* Cache.swift */,
+				30A942252347BDB5001FF529 /* CachedCategory+CoreDataClass.swift */,
+				30A942262347BDB5001FF529 /* CachedCategory+CoreDataProperties.swift */,
+				30A942312347CE9F001FF529 /* CachedImage+CoreDataClass.swift */,
+				30A942322347CE9F001FF529 /* CachedImage+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +264,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30A942202347900C001FF529 /* cocktails_ordinary.json in Resources */,
+				30A942212347900C001FF529 /* cocktails.json in Resources */,
+				30A942222347900C001FF529 /* categories.json in Resources */,
+				30A942382347DCFB001FF529 /* README.md in Resources */,
 				3094346B2346251100040B09 /* LaunchScreen.storyboard in Resources */,
 				309434682346251100040B09 /* Assets.xcassets in Resources */,
 				309434632346250D00040B09 /* Main.storyboard in Resources */,
@@ -229,6 +278,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30A9421B234789D6001FF529 /* categories.json in Resources */,
+				30A9421D23478A16001FF529 /* cocktails.json in Resources */,
+				30A9421F23478DF3001FF529 /* cocktails_ordinary.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,12 +292,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				309434812346288C00040B09 /* CategoryViewController.swift in Sources */,
+				30A942332347CE9F001FF529 /* CachedImage+CoreDataClass.swift in Sources */,
+				30A942362347D9C7001FF529 /* CocktailError.swift in Sources */,
+				30A942282347BDB5001FF529 /* CachedCategory+CoreDataProperties.swift in Sources */,
 				30943489234676A200040B09 /* TableViewCell.swift in Sources */,
 				309434602346250D00040B09 /* MainViewController.swift in Sources */,
+				30A942342347CE9F001FF529 /* CachedImage+CoreDataProperties.swift in Sources */,
+				30A94217234780A0001FF529 /* Cocktails.swift in Sources */,
 				309434662346250D00040B09 /* Cocktails.xcdatamodeld in Sources */,
 				309434832346291F00040B09 /* CocktailViewController.swift in Sources */,
+				30A9421523478098001FF529 /* Categories.swift in Sources */,
 				3094345E2346250D00040B09 /* AppDelegate.swift in Sources */,
+				30A942132347808C001FF529 /* RestAgent.swift in Sources */,
 				3094348723462BB200040B09 /* RestStructs.swift in Sources */,
+				30A942272347BDB5001FF529 /* CachedCategory+CoreDataClass.swift in Sources */,
+				30A942242347BD0B001FF529 /* Cache.swift in Sources */,
 				30943485234629A500040B09 /* RestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				309434762346251100040B09 /* CocktailsTests.swift in Sources */,
+				30A9421923478745001FF529 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

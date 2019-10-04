@@ -11,7 +11,7 @@ import UIKit
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet private weak var categoriesTableView: UITableView!
     
-    public var restService: RestService!
+    public var categories: Categories!
     public var mainViewController: MainViewController!
     
     override func viewDidLoad() {
@@ -22,14 +22,14 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restService.getNumberOfCategories()
+        return categories.getNumberOfCategories()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = categoriesTableView.dequeueReusableCell(withIdentifier: "categoryCellID", for: indexPath) as! TableViewCell
         
-        cell.categoryNameLabel.text = restService.getCategoryName(at: indexPath.row)
-        cell.checkLabel.isHidden = !restService.isCurrentCategory(categoryIndex: indexPath.row)
+        cell.categoryNameLabel.text = categories.getCategoryName(at: indexPath.row)
+        cell.checkLabel.isHidden = !categories.isCurrentCategory(categoryIndex: indexPath.row)
         
         return cell
     }

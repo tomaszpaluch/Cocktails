@@ -26,8 +26,12 @@ class CocktailViewController: UIViewController {
         semaphore.signal()
     }
     
-    func setCocktailDetails(name: String, imageData: Data) {
-        let image = UIImage(data: imageData)
+    func setCocktailDetails(name: String, imageData: Data?) {
+        var image: UIImage?
+        
+        if let imageDataUnwrapped = imageData {
+            image = UIImage(data: imageDataUnwrapped)
+        } 
         
         semaphore.wait()
         
