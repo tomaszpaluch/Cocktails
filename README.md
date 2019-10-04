@@ -1,7 +1,7 @@
 #  Cocktails
 
 ## about
-Simple REST app, making use of CocktailsDB API. 
+Simple REST app, making use of a CocktailsDB API. 
 
 ## requirements
 In order to compile and run this app you need to have a Mac running Mac OS Mojave with Xcode 10.2.
