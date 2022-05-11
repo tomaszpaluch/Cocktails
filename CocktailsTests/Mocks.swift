@@ -10,47 +10,54 @@ import Foundation
 @testable import Cocktails
 
 class RestServiceMock: RestService {
-    override init() {
+    enum RestServiceMockType {
+        case ingredients
+        case cocktails
+    }
+    
+    enum MockResult {
+        case success
+        case failure(CocktailError)
+    }
+    
+    private let mockURL: URL?
+    private let result: MockResult
+    
+    init(of type: RestServiceMockType, with result: MockResult) {
+        switch type {
+        case .ingredients:
+            mockURL = URL(
+                fileURLWithPath: Bundle.main.path(
+                    forResource: "ingredients",
+                    ofType: "json"
+                )!
+            )
+        case .cocktails:
+            mockURL = URL(
+                fileURLWithPath: Bundle.main.path(
+                    forResource: "ingredients",
+                    ofType: "json"
+                )!
+            )
+        }
+        
+        self.result = result
+        
         super.init()
     }
     
-    override func makeInquiry<T: Codable>(url: (site:String, params: [URLQueryItem]?), completion: @escaping (T) -> Void) {
-        let url = createActualURL(url.site, with: url.params)
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        URLSession.shared.dataTask(with: request) { data, response, error -> Void in
-            guard let dataResponse = data, error == nil else {
-                return
+    override func makeInquiry<T: Codable>(
+        url: (site: String, params: [URLQueryItem]?),
+        completion: @escaping (Result<T, CocktailError>) -> Void)
+    {
+        switch result {
+        case .success:
+            let jsonDecoder = JSONDecoder()
+            if let url = mockURL, let dataResponse = try? Data(contentsOf: url), let responseModel = try? jsonDecoder.decode(T.self, from: dataResponse) {
+                completion(.success(responseModel))
             }
-            
-            do {
-                let jsonDecoder = JSONDecoder()
-                let responseModel = try jsonDecoder.decode(T.self, from: dataResponse)
-                
-                completion(responseModel)
-            } catch {
-                print("JSON Serialization error \n\(error)")
-            }
-        }.resume()
-    }
-    
-    private func createActualURL(_ page: String, with queryItems: [URLQueryItem]?) -> URL {
-        switch page {
-        case "list.php":
-            return URL(fileURLWithPath: Bundle.main.path(forResource: "categories", ofType: "json")!)
-        case "filter.php":
-            switch queryItems![0].value
-            {
-            case "Ordinary Drink":
-                return URL(fileURLWithPath: Bundle.main.path(forResource: "cocktails_ordinary", ofType: "json")!)
-            case "Coffee / Tea":
-                return URL(fileURLWithPath: Bundle.main.path(forResource: "cocktails", ofType: "json")!)
-            default:
-                return URL(string: "wp.pl")!
-            }
-        default:
-            return URL(string: "wp.pl")!
+        case let .failure(error):
+            completion(.failure(error))
         }
     }
 }

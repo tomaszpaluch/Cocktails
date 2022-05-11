@@ -1,11 +1,3 @@
-//
-//  RestStructs.swift
-//  Cocktails
-//
-//  Created by tomaszpaluch on 03/10/2019.
-//  Copyright © 2019 tomaszpaluch. All rights reserved.
-//
-
 import Foundation
 
 struct CocktailContainer<T: Codable>: Codable {
@@ -16,6 +8,10 @@ struct CocktailCategory: Codable {
     let strCategory: String
     
     var isCurrent: Bool?
+}
+
+struct CocktailIndgredient: Codable {
+    let strIngredient1: String
 }
 
 struct CocktailDetails: Codable {

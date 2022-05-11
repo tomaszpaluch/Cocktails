@@ -1,14 +1,6 @@
-//
-//  RestAgent.swift
-//  Cocktails
-//
-//  Created by tomaszpaluch on 04/10/2019.
-//  Copyright © 2019 tomaszpaluch. All rights reserved.
-//
-
 import Foundation
 
-class RestAgent {
+class RestBroker {
     private let restService: RestService
     
     private let siteName: String
@@ -21,15 +13,16 @@ class RestAgent {
         self.urlQueryItems = urlQueryItems
     }
     
-    func getElements<T: Codable>(urlQueryItems: [URLQueryItem], completion: @escaping (T) -> Void) {
+    func getElements<T: Codable>(
+        urlQueryItems: [URLQueryItem],
+        completion: @escaping (Result<T, CocktailError>) -> Void
+    ) {
         restService.makeInquiry(url: (siteName, urlQueryItems), completion: completion)
     }
     
-    func getElements<T: Codable>(completion: @escaping (T) -> Void) {
+    func getElements<T: Codable>(
+        completion: @escaping (Result<T, CocktailError>) -> Void
+    ) {
         restService.makeInquiry(url: (siteName, urlQueryItems), completion: completion)
-    }
-    
-    func getImage(cocktail: CocktailDetails, completion: @escaping (Data?) -> Void) {
-        restService.getImage(cocktail: cocktail, completion: completion)
     }
 }
